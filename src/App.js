@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {choice} from './helpers';
+import answers from './answers'
+import EightBall from './EightBall';
+
 
 function App() {
+  let answer = choice(answers);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Magic Eight Ball</h1>
+        <EightBall msg = 'Think of a Question' color = 'black' />
+        <EightBall msg = {answer.msg} color = {answer.color} />
     </div>
   );
 }

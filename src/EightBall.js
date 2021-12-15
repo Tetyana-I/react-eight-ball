@@ -1,9 +1,9 @@
 import './EightBall.css';
 
-const EightBall = ({msg, color}) => (
+const EightBall = ({ msg, color }) => (
     
-    <div className="EightBall">
-        <p className="EightBall-msg">{msg}</p>
+    <div className = "EightBall"  style = {{ backgroundColor: color }}>
+        <p className = "EightBall-msg">{ msg }</p>
     </div> 
 )
 

@@ -3,15 +3,21 @@ import './App.css';
 import {choice} from './helpers';
 import answers from './answers'
 import EightBall from './EightBall';
-
+import React, { useState } from "react";
 
 function App() {
-  let answer = choice(answers);
+  const getAnswer = () => {
+    let answer = choice(answers);
+    setMsg(answer.msg);
+    setColor(answer.color);
+  }
+  const [msg, setMsg] = useState('Think of a Question');
+  const [color, setColor] = useState('black');
+
   return (
-    <div className="App">
+    <div className = "App" onClick = { getAnswer } >
       <h1>Magic Eight Ball</h1>
-        <EightBall msg = 'Think of a Question' color = 'black' />
-        <EightBall msg = {answer.msg} color = {answer.color} />
+        <EightBall msg = { msg } color = { color } />
     </div>
   );
 }

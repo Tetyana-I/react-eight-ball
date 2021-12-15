@@ -1,12 +1,12 @@
 # App Description
 In this exercise, a simulation of a classic kid’s toy, the **Magic Eight Ball** is built.
 
-This application will consist of two components:
+This application consists of two components:
 
-*App*
+*App*:
     A simple component that just renders an EightBall component.
 
-*EightBall*
+*EightBall*:
     The component for the magic eight ball. The EightBall takes a single property, answers, which is an array of objects, with each object having a key for msg and color. The EightBall has a state to keep track of the current color and message text, and this state initially is “black” and “Think of a Question”. The ball chooses a random message when it is clicked on. This changes the background color of the ball and the message.
 
 ### Getting Started with Create React App
